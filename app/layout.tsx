@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Marci Metzger | Your Pahrump Realtor",
   description:
     "Personal real estate guidance in Pahrump, Nevada. Marci Metzger at The Ridge Realty Group brings nearly three decades of experience to your next move.",
-  icons: { icon: "/images/logo.png" },
+  icons: { icon: "/images/logo_white.png" },
 };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

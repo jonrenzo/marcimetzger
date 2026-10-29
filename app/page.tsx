@@ -300,7 +300,7 @@ export default function Home() {
               href="#"
               aria-label="Marci Metzger home"
             >
-              <Ridge />
+              <Ridge white />
               <span>
                 MARCI METZGER<small>The Ridge Realty Group</small>
               </span>

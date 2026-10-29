@@ -81,10 +81,10 @@ export function Arrow({ down = false }: { down?: boolean }) {
   );
 }
 
-export function Ridge() {
+export function Ridge({ white = false }: { white?: boolean }) {
   return (
     <Image
-      src="/images/logo.png"
+      src={white ? "/images/logo_white.png" : "/images/logo.png"}
       alt=""
       width={1071}
       height={334}
