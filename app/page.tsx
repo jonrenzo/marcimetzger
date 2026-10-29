@@ -1,4 +1,4 @@
-import { Arrow, ImageSlot, Ridge } from "./visuals";
+import { Arrow, ImageSlot, Ridge, SocialLinks, TiltedImageSlot } from "./visuals";
 import {
   ContactDialog,
   Header,
@@ -61,7 +61,7 @@ export default function Home() {
             </span>
             <div className="container value-grid">
               <div className="image-region" data-scroll="image">
-                <ImageSlot name="portrait" />
+                <TiltedImageSlot name="portrait" />
               </div>
               <Reveal className="value-copy">
                 <h2 id="about-title">
@@ -96,7 +96,7 @@ export default function Home() {
             </span>
             <div className="container value-grid">
               <div className="image-region" data-scroll="image">
-                <ImageSlot name="selling" />
+                <TiltedImageSlot name="selling" />
               </div>
               <Reveal className="value-copy">
                 <h2 id="selling-title">
@@ -131,7 +131,7 @@ export default function Home() {
             </span>
             <div className="container value-grid">
               <div className="image-region" data-scroll="image">
-                <ImageSlot name="buying" />
+                <TiltedImageSlot name="buying" />
               </div>
               <Reveal className="value-copy">
                 <h2 id="buying-title">
@@ -347,6 +347,7 @@ export default function Home() {
           </div>
           <div className="footer-bottom">
             <span>© 2026 Marci Metzger · The Ridge Realty Group</span>
+            <SocialLinks />
             <a href="#">Back to top ↑</a>
           </div>
         </div>

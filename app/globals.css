@@ -1,3 +1,7 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
 :root {
   --ink: #1e1e1e;
   --canvas: #fff;
@@ -615,10 +619,15 @@ main {
   grid-row: 1;
   position: relative;
 }
-.image-region .image-slot {
+.image-region .image-slot,
+.image-region .image-tilt-wrap {
   width: 75%;
   aspect-ratio: 1;
   transform: translateY(var(--media-shift, 0px));
+}
+.image-tilt-wrap .tilted-card {
+  width: 100%;
+  height: 100%;
 }
 .value-copy {
   grid-column: 4/6;
@@ -628,7 +637,8 @@ main {
 .value-reverse .image-region {
   grid-column: 3/6;
 }
-.value-reverse .image-slot {
+.value-reverse .image-slot,
+.value-reverse .image-tilt-wrap {
   margin-left: auto;
 }
 .value-reverse .value-copy {
@@ -1093,6 +1103,25 @@ textarea::placeholder {
 .footer-bottom a {
   white-space: nowrap;
 }
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.social-links a {
+  display: inline-flex;
+  padding: 8px;
+  color: #ffffffbf;
+  transition: color 0.2s;
+}
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--gold);
+}
+.social-links svg {
+  width: 18px;
+  height: 18px;
+}
 @keyframes menu-in {
   from {
     opacity: 0;
@@ -1212,7 +1241,8 @@ textarea::placeholder {
     grid-row: auto;
     max-width: none;
   }
-  .value-grid .image-slot {
+  .value-grid .image-slot,
+  .value-grid .image-tilt-wrap {
     width: 100%;
     height: 300px;
     aspect-ratio: auto;
@@ -1769,6 +1799,7 @@ textarea::placeholder {
   .hero-background,
   .hero-content,
   .image-region .image-slot,
+  .image-region .image-tilt-wrap,
   .featured-image,
   .services-background,
   .outline-word {
