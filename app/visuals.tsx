@@ -68,17 +68,18 @@ export function ImageSlot({
 export function TiltedImageSlot({ name }: { name: keyof typeof images }) {
   const image = images[name];
   return (
-    <div className={`image-tilt-wrap image-${name}`}>
+    <div className="image-tilt-wrap">
       <TiltedCard
         containerWidth="100%"
         containerHeight="100%"
         imageWidth="100%"
         imageHeight="100%"
         radius={12}
-        rotateAmplitude={8}
-        scaleOnHover={1.02}
-        glare={0.35}
-        shadow={0.4}
+        rotateAmplitude={18}
+        scaleOnHover={1.05}
+        glare={0.5}
+        shadow={0.45}
+        smoothness={0.45}
         showTooltip={false}
         altText={image.alt || image.label}
       >
